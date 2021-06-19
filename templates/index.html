@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="politics whomtovote currentaffairs">
+  <meta name="robots" content="index, follow">
+  <title>Clear Politics</title>
+  <!-- <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Pirata+One&amp;display=block'> -->
+  <link rel="stylesheet" href="static/css/style.css">
+
+  <style>
+    #imglogo {
+      list-style: none;
+      width: auto;
+      height: 47px;
+      position: absolute;
+      margin-top: 0.4rem;
+      margin-left: 20px;
+    }
+
+    .imgintro {
+      width: 57vw;
+      height: 35vw;
+    }
+
+    body {
+      background-color: #f7f6f2;
+    }
+
+    section {
+      display: flex;
+      justify-content: center;
+      /* border: 1px solid #000; */
+      /* background-color: rgb(23, 112, 172); */
+    }
+
+
+    /* select opton CSS */
+    select {
+      background: #F1F0CC;
+      padding: 1.2rem 0rem 1rem 1rem;
+      border: none;
+      border-radius: 3px;
+      color: black;
+      outline: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      box-shadow: 1px 4px 15px #3F0D12;
+      font-family: 'Oswald', sans-serif;
+      cursor: pointer;
+    }
+
+    .custom-select {
+      position: relative;
+      height: 58px;
+    }
+
+    @media (max-width:512px) {
+      .custom-select {
+        height: 54px;
+      }
+
+      select {
+        padding: 1.2rem 0rem 1rem 0.2rem;
+        font-size: 1rem;
+      }
+    }
+
+    .option {
+      padding: 1rem 2rem;
+    }
+
+    .icons {
+      display: block;
+      width: 3rem;
+      height: 100%;
+      background: #D5BF86;
+      position: absolute;
+      border-radius: 0 3px 3px 0;
+      top: 0;
+      right: 0;
+      pointer-events: none;
+    }
+
+    .icons::before,
+    .icons::after {
+      content: "";
+      width: 0;
+      height: 0;
+      position: absolute;
+      right: 20%;
+      transform: translate(-50%, 50%)
+    }
+
+    .icons::before {
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid #A71D31;
+      top: 30%;
+    }
+
+    .icons::after {
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 7px solid #A71D31;
+      top: 50%;
+    }
+
+    .selectcountry {
+      margin: 20px 20px;
+    }
+
+    /* .bigtext {
+      font-size: 1rem;
+    } */
+
+
+    a {
+      padding: 24px;
+    }
+
+
+    .card__image--river {
+      background-image: url('/static/img/pol1.jpeg');
+    }
+
+    .card__image--record {
+      background-image: url('/static/img/pol2.jpeg');
+    }
+
+    .card__image--fence {
+      background-image: url('/static/img/pol3.jpeg');
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <li id="imglogo"><img src="static/img/logo3.png" alt="hey there" id="imglogo"></li>
+    <input type="checkbox" id="click">
+    <label for="click" class="menubtn">
+      <img src="static/img/images.png" alt="" style="width: 52px; margin-top: 14px;">
+    </label>
+    <nav>
+      <ul>
+        <li class="flexitem"><a href="home"> Home</a></li>
+        <li class="flexitem"><a href="about"> About</a></li>
+        <li class="flexitem"><a href="contact">Contact Us</a></li>
+        <li class="flexitem" id="fitem4">Login or Signup</li>
+      </ul>
+    </nav>
+  </header>
+  <!-- partial:index.partial.html -->
+  <div class="container">
+    <canvas class="globe" width="1800" height="1600"></canvas>
+  </div>
+
+  <section id="frstartcl">
+
+    <span class="selectcountry">SELECT COUNTRY</span>
+    <div class="custom-select">
+      <select name="forma" onchange="location = this.value;">
+        <option value="" class="option">-Select Country-</option>
+        <option value="" class="option">Afghanistan</option>
+        <option value="" class="option">Albania</option>
+        <option value="" class="option">Algeria</option>
+        <option value="" class="option">American Samoa</option>
+        <option value="" class="option">Andorra</option>
+        <option value="" class="option">Angola</option>
+        <option value="" class="option">Anguilla</option>
+        <option value="" class="option">Antartica</option>
+        <option value="" class="option bigtext">Antigua and Barbuda</option>
+        <option value="" class="option">Argentina</option>
+        <option value="" class="option">Armenia</option>
+        <option value="" class="option">Aruba</option>
+        <option value="" class="option">Austraila</option>
+        <option value="" class="option">Austria</option>
+        <option value="" class="option">Azerbaijan</option>
+        <option value="" class="option">Bahamas</option>
+        <option value="" class="option">Bahrain</option>
+        <option value="" class="option">Bangladesh</option>
+        <option value="" class="option">Barbados</option>
+        <option value="" class="option">Belarus</option>
+        <option value="" class="option">Belgium</option>
+        <option value="" class="option">Belize</option>
+        <option value="" class="option">Benin</option>
+        <option value="" class="option">Bermuda</option>
+        <option value="" class="option">Bhutan</option>
+        <option value="" class="option">Bolivia</option>
+        <option value="" class="option bigtext">Bosnia and Herzegovina</option>
+        <option value="" class="option">Botswana</option>
+        <option value="" class="option">Brazil</option>
+        <option value="" class="option">Brazzaville</option>
+        <option value="" class="option">Brunei Darussalam</option>
+        <option value="" class="option">Bulgaria</option>
+        <option value="" class="option">Burkina Faso</option>
+        <option value="" class="option">Burundi</option>
+        <option value="" class="option">Cambodia</option>
+        <option value="" class="option">Cameroon</option>
+        <option value="" class="option">Canada</option>
+        <option value="" class="option">Cape Verde</option>
+        <option value="" class="option">Cayman Islands</option>
+        <option value="" class="option">Central African Republic</option>
+        <option value="" class="option">Chad</option>
+        <option value="" class="option">Chile</option>
+        <option value="" class="option">China</option>
+        <option value="" class="option">Christmas Island</option>
+        <option value="" class="option bigtext">Cocos (Keeling) Islands</option>
+        <option value="" class="option">Colombia</option>
+        <option value="" class="option">Comoros</option>
+        <option value="" class="option">Cook Islands</option>
+        <option value="" class="option">Costa Rica</option>
+        <option value="" class="option">Cote D'ivoire</option>
+        <option value="" class="option">Croatia</option>
+        <option value="" class="option">Cuba</option>
+        <option value="" class="option">Cyprus</option>
+        <option value="" class="option">Czech Republic</option>
+        <option value="" class="option">Denmark</option>
+        <option value="" class="option">Djibouti</option>
+        <option value="" class="option">Dominica</option>
+        <option value="" class="option">Dominician Republic</option>
+        <option value="" class="option">East Timor</option>
+        <option value="" class="option">Ecuador</option>
+        <option value="" class="option">Egypt</option>
+        <option value="" class="option">El Salvador</option>
+        <option value="" class="option">Equatorial Guinea</option>
+        <option value="" class="option">Eritrea</option>
+        <option value="" class="option">Estonia</option>
+        <option value="" class="option">Ethiopia</option>
+        <option value="" class="option">Falkland Islands</option>
+        <option value="" class="option">Faroe Islands</option>
+        <option value="" class="option">Fiji</option>
+        <option value="" class="option">Finland</option>
+        <option value="" class="option">France</option>
+        <option value="" class="option">French Guiana</option>
+        <option value="" class="option">Frencch Polynesia</option>
+        <option value="" class="option bigtext">French Southern Territories</option>
+        <option value="" class="option">Gabon</option>
+        <option value="" class="option">The Gambia</option>
+        <option value="" class="option">Georgia</option>
+        <option value="" class="option">Germany</option>
+        <option value="" class="option">Ghana</option>
+        <option value="" class="option">Gibraltar</option>
+        <option value="" class="option">Greece</option>
+        <option value="" class="option">Greenland</option>
+        <option value="" class="option">Greneda</option>
+        <option value="" class="option">Guadeloupe</option>
+        <option value="" class="option">Guam</option>
+        <option value="" class="option">Guatemala</option>
+        <option value="" class="option">Guinea</option>
+        <option value="" class="option">Guinea-Bissau</option>
+        <option value="" class="option">Guyana</option>
+        <option value="" class="option">Haiti</option>
+        <option value="" class="option">Holy See</option>
+        <option value="" class="option">Honduras</option>
+        <option value="" class="option">Hong Kong</option>
+        <option value="" class="option">Hungary</option>
+        <option value="" class="option">Iceland</option>
+        <option value="/india" class="option">India</option>
+        <option value="" class="option">Indonesia</option>
+        <option value="" class="option">Iran</option>
+        <option value="" class="option">Iraq</option>
+        <option value="" class="option">Ireland</option>
+        <option value="" class="option">Israel</option>
+        <option value="" class="option">Italy</option>
+        <option value="" class="option">Ivory Coast</option>
+        <option value="" class="option">Jamaica</option>
+        <option value="" class="option">Japan</option>
+        <option value="" class="option">Jordan</option>
+        <option value="" class="option">Kazakhstan</option>
+        <option value="" class="option">Kenya</option>
+        <option value="" class="option">Kirbati</option>
+        <option value="" class="option">North Korea</option>
+        <option value="" class="option">South Korea</option>
+        <option value="" class="option">Kosovo</option>
+        <option value="" class="option">Kuwait</option>
+        <option value="" class="option">Kyrgyzstan</option>
+        <option value="" class="option">Kinshasa</option>
+        <option value="" class="option">Lao</option>
+        <option value="" class="option">Latvia</option>
+        <option value="" class="option">Lebanon</option>
+        <option value="" class="option">Lesotho</option>
+        <option value="" class="option">Liberia</option>
+        <option value="" class="option">Libya</option>
+        <option value="" class="option">Liechtenstein</option>
+        <option value="" class="option">Lituania</option>
+        <option value="" class="option">Luxembourg</option>
+        <option value="" class="option">Macau</option>
+        <option value="" class="option">Madagascar</option>
+        <option value="" class="option">Malalwi</option>
+        <option value="" class="option">Malaysia</option>
+        <option value="" class="option">Maldives</option>
+        <option value="" class="option">Mali</option>
+        <option value="" class="option">Malta</option>
+        <option value="" class="option">Marshall Islands</option>
+        <option value="" class="option">Martinique</option>
+        <option value="" class="option">Mauritania</option>
+        <option value="" class="option">Mauritius</option>
+        <option value="" class="option">Mayotte</option>
+        <option value="" class="option">Mexico</option>
+        <option value="" class="option">Micronesia</option>
+        <option value="" class="option">Moldova</option>
+        <option value="" class="option">Monaco</option>
+        <option value="" class="option">Mongolia</option>
+        <option value="" class="option">Montenegro</option>
+        <option value="" class="option">Montserrat</option>
+        <option value="" class="option">Morocco</option>
+        <option value="" class="option">Mozambique</option>
+        <option value="" class="option">Myanmar</option>
+        <option value="" class="option">Namibia</option>
+        <option value="" class="option">Nauru</option>
+        <option value="" class="option">Nepal</option>
+        <option value="" class="option">Netherlands</option>
+        <option value="" class="option bigtext">Netherlands Antilles</option>
+        <option value="" class="option">New Zealand</option>
+        <option value="" class="option">Nicaragua</option>
+        <option value="" class="option">Niger</option>
+        <option value="" class="option">Nigeria</option>
+        <option value="" class="option">Niue</option>
+        <option value="" class="option">North Macedonia</option>
+        <option value="" class="option bigtext">Northern Mariana Islands</option>
+        <option value="" class="option">Norway</option>
+        <option value="" class="option">Oman</option>
+        <option value="" class="option">Pakistan</option>
+        <option value="" class="option">Palau</option>
+        <option value="" class="option bigtext">Palestinian Territories</option>
+        <option value="" class="option">Panama</option>
+        <option value="" class="option">Papua New Guinea</option>
+        <option value="" class="option">Paraguay</option>
+        <option value="" class="option">Peru</option>
+        <option value="" class="option">Philippines</option>
+        <option value="" class="option">Pitcairn Island</option>
+        <option value="" class="option">Poland</option>
+        <option value="" class="option">Portugal</option>
+        <option value="" class="option">Puerto Rico</option>
+        <option value="" class="option">Qatar</option>
+        <option value="" class="option">Reunion Island</option>
+        <option value="" class="option">Romania</option>
+        <option value="" class="option">Russian Foundation</option>
+        <option value="" class="option">Rwanda</option>
+        <option value="" class="option bigtext">Saint Kitts and Nevis</option>
+        <option value="" class="option">Saint Lucia</option>
+        <option value="" class="option bigtext">Saint Vincent and the Grenadines</option>
+        <option value="" class="option">Samoa</option>
+        <option value="" class="option">San Marino</option>
+        <option value="" class="option bigtext">Sao Tome and Principle</option>
+        <option value="" class="option">Saudi Arabia</option>
+        <option value="" class="option">Senegal</option>
+        <option value="" class="option">Serbia</option>
+        <option value="" class="option">Seychelles</option>
+        <option value="" class="option">Sierra Leone</option>
+        <option value="" class="option">Singapore</option>
+        <option value="" class="option">Slovakia</option>
+        <option value="" class="option">Slovenia</option>
+        <option value="" class="option">Solomon Islands</option>
+        <option value="" class="option">Somalia</option>
+        <option value="" class="option">South Africa</option>
+        <option value="" class="option">South Sudan</option>
+        <option value="" class="option">Spain</option>
+        <option value="" class="option">Sri Lanka</option>
+        <option value="" class="option">Sudan</option>
+        <option value="" class="option">Suriname</option>
+        <option value="" class="option">Swaziland</option>
+        <option value="" class="option">Sweden</option>
+        <option value="" class="option">Switzerland</option>
+        <option value="" class="option">Syria</option>
+        <option value="" class="option">Taiwan</option>
+        <option value="" class="option">Tajikistan</option>
+        <option value="" class="option">Tanzania</option>
+        <option value="" class="option">Thailand</option>
+        <option value="" class="option">Tibet</option>
+        <option value="" class="option">Timor-Leste</option>
+        <option value="" class="option">Togo</option>
+        <option value="" class="option">Tokelau</option>
+        <option value="" class="option">Tonga</option>
+        <option value="" class="option">Trinidad and Tobago</option>
+        <option value="" class="option">Tunisia</option>
+        <option value="" class="option">Turkey</option>
+        <option value="" class="option">Turkmenistan</option>
+        <option value="" class="option bigtext">Turks and Caicos Islands</option>
+        <option value="" class="option">Tuvalu</option>
+        <option value="" class="option">Uganda</option>
+        <option value="" class="option">Ukraine</option>
+        <option value="" class="option bigtext">United Arab Emirates</option>
+        <option value="" class="option">United Kingdom</option>
+        <option value="" class="option">United States</option>
+        <option value="" class="option">Uruguay</option>
+        <option value="" class="option">Uzbekistan</option>
+        <option value="" class="option">Vanuatu</option>
+        <option value="" class="option">Vatican City State</option>
+        <option value="" class="option">Venezuela</option>
+        <option value="" class="option">Vietnam</option>
+        <option value="" class="option bigtext">Virgin Islands (British)</option>
+        <option value="" class="option bigtext">Virgin Islands (U.S.)</option>
+        <option value="" class="option bigtext">Wallis and Futuna Islands</option>
+        <option value="" class="option">Western Shara</option>
+        <option value="" class="option">Yemen</option>
+        <option value="" class="option">Zambia</option>
+        <option value="" class="option">Zimbabwe</option>
+      </select>
+      <span class="icons"></span>
+    </div>
+  </section>
+
+
+
+
+  <ul class="cards">
+    <li class="cards__item">
+      <div class="card">
+        <div class="card__image card__image--fence"></div>
+        <div class="card__content">
+          <div class="card__title"><strong>how it works?</strong></div>
+          <p class="card__text">We collects and researchs data and verify its putriy and importance and then we share it
+            with you. We are very serious of our work and the main motive of our project is awaring the peoples and
+            specially youths about the political system in their nation as well as the information of different
+            political parties around the world so hold tight you will get a huge knowledge</p>
+          <button class="btn btn--block card__btn">Learn More..</button>
+        </div>
+      </div>
+    </li>
+    <li class="cards__item">
+      <div class="card">
+        <div class="card__image card__image--river"></div>
+        <div class="card__content">
+          <div class="card__title" style="color: black;"><strong> GLOBAL ANALYTICS</strong></div>
+          <p class="card__text"><strong>Least Corrupted Country: </strong> Denmark with Corruption Perception
+            Index of 88 out of 100  <br>  <strong>Most Corrupted Country: </strong>South Sudan with corruption
+            Perception Index of 12 out of 100</p>
+          <button class="btn btn--block card__btn">Know More</button>
+        </div>
+      </div>
+    </li>
+    <li class="cards__item">
+      <div class="card">
+        <div class="card__image card__image--record"></div>
+        <div class="card__content">
+          <div class="card__title"><strong>TRENDING TOPICS</strong></div>
+          <p class="card__text">Here are the 10 trending topics of the day come and read to get a quick knowledge about
+            so come fast and gather them before they refreshes</p>
+          <button class="btn btn--block card__btn">Explore</button>
+        </div>
+      </div>
+    </li>
+
+  </ul>
+
+  <footer>
+    <div id="footerop">All Copyrights Reserved @Sujal</div>
+  </footer>
+  <!-- partial -->
+  <script src="static/js/script.js"></script>
+
+</body>
+
+</html>

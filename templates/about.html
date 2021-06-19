@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="politics whomtovote currentaffairs">
+  <meta name="robots" content="index, follow">
+    <title>Clear Politics</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Nunito);
+
+
+        header {
+            z-index: 5;
+        }
+
+        #imglogo {
+            list-style: none;
+            width: auto;
+            height: 47px;
+            position: absolute;
+            margin-top: 0.4rem;
+            margin-left: 1rem;
+        }
+
+        .imgintro {
+            width: 57vw;
+            height: 35vw;
+        }
+
+
+
+        html {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            perspective: 1px;
+            transform-style: preserve-3d;
+            height: 100%;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            font-family: Nunito;
+        }
+
+        h1 {
+            font-size: 250%
+        }
+
+        p {
+            font-size: 126%;
+            line-height: 150%;
+            color: #333;
+        }
+
+        .slide {
+            position: relative;
+            padding: 25vh 10%;
+            min-height: 100vh;
+            width: 100vw;
+            box-sizing: border-box;
+            /* box-shadow: 0 -1px 10px rgba(0, 0, 0, .7); */
+            transform-style: inherit;
+        }
+
+        div img {
+            position: absolute;
+            top: 50%;
+            left: 35%;
+            width: 320px;
+            height: 240px;
+            transform: translateZ(.25px) scale(.75) translateX(-94%) translateY(-100%) rotate(2deg);
+            padding: 10px;
+            border-radius: 5px;
+            background: rgba(240, 230, 220, .7);
+            /* box-shadow: 0 0 8px rgba(0, 0, 0, .7); */
+        }
+
+        div img:last-of-type {
+            transform: translateZ(.4px) scale(.6) translateX(-104%) translateY(-40%) rotate(-5deg);
+        }
+
+        .slide:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            /* box-shadow: 0 0 8px 1px rgba(0, 0, 0, .7); */
+        }
+
+        .title {
+            padding: 11%;
+            border-radius: 5px;
+            background: rgba(240, 230, 220, .7);
+            box-shadow: 0 0 8px rgba(0, 0, 0, .7);
+        }
+
+        .slide:nth-child(2n) .title {
+            margin-left: 0;
+            margin-right: auto;
+        }
+
+        .slide:nth-child(2n+1) .title {
+            margin-left: auto;
+            margin-right: 0;
+        }
+
+        .slide,
+        .slide:before {
+            background: 50% 50% / cover;
+        }
+
+        .header {
+            text-align: center;
+            font-size: 175%;
+            color: #fff;
+            text-shadow: 0 2px 17px #000;
+        }
+
+        #title {
+            background-image: url('static/img/about8.png');
+            z-index: 2;
+        }
+
+        #title h1 {
+            transform: translateZ(.25px) scale(.75);
+            transform-origin: 50% 100%;
+
+        }
+
+        #slide1:before {
+            background-image: url('static/img/267.jpg');
+            transform: translateZ(-1px) scale(2);
+        }
+
+        #slide2 {
+            background-image: url('static/img/slide-3.jpg');
+            z-index: 2;
+        }
+
+        #slide3:before {
+            background-image: url('static/img/slide-1.jpg');
+            transform: translateZ(-1px) scale(2);
+        }
+
+        #slide4 {
+            background: #222;
+        }
+
+        nav ul li a {
+            padding: 24px;
+        }
+
+
+
+        nav ul {
+            position: fixed;
+        }
+
+        .flexitem {
+            font-family: arial;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <li id="imglogo"><img src="static/img/logo3.png" alt="hey there" id="imglogo"></li>
+        <input type="checkbox" id="click">
+        <label for="click" class="menubtn">
+            <img src="static/img/images.png" alt="" style="width: 52px; margin-top: 14px;">
+        </label>
+        <nav>
+            <ul>
+                <li class="flexitem"><a href="home"> Home</a></li>
+                <li class="flexitem"><a href="about"> About</a></li>
+                <li class="flexitem"><a href="contact">Contact Us</a></li>
+                <li class="flexitem" id="fitem4">Login or Signup</li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- partial:index.partial.html -->
+    <div id="title" class="slide header">
+        <h1>About Us</h1>
+    </div>
+
+    <div id="slide1" class="slide">
+        <div class="title">
+            <h1>Who am I?</h1>
+            <p>Hello Reader! i am Sujal owner and maintainer of clear politics, a high school student but a high student
+                doesn't mean weakness its my power that I have leant that much thing in this age</p>
+        </div>
+    </div>
+
+    <div id="slide2" class="slide">
+        <div class="title">
+            <h1>What're My Plans?</h1>
+            <p>I want to build a webite that can be useful for awaring people about different political happening around
+                the globe and their country it will them them to grow their interest in politics and to take a right
+                decision to whom to vote</p>
+        </div>
+    </div>
+
+    <div id="slide3" class="slide">
+        <div class="title">
+            <h1>My Social Handles</h1>
+            <p><strong>twitter:</strong> <a href="" style="padding: 0;">twitter.com/clearpolitics</a> <br>
+                <strong>instagram:</strong> <a href="" style="padding: 0;">instagram.com/clearpolitics</a> <br>
+                <strong>facebook:</strong> <a href="" style="padding: 0;">facebook.com/clearpolitics</a> <br>
+
+            </p>
+        </div>
+    </div>
+
+    <div id="slide4" class="slide header">
+        <h3>All Copyrights Reserved @Sujal</h3>
+    </div>
+    <!-- partial -->
+
+</body>
+
+</html>

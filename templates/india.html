@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="politics whomtovote currentaffairs">
+  <meta name="robots" content="index, follow">
+    <title>Clear Politics</title>
+    <!-- <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Pirata+One&amp;display=block'> -->
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <style>
+        #imglogo {
+            list-style: none;
+            width: auto;
+            height: 47px;
+            position: absolute;
+            margin-top: 0.4rem;
+            margin-left: 1rem;
+        }
+
+        .imgintro {
+            width: 57vw;
+            height: 35vw;
+        }
+
+        body {
+            background-color: #f7f6f2;
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            /* border: 1px solid #000; */
+            /* background-color: rgb(23, 112, 172); */
+        }
+
+
+        /* select opton CSS */
+        select {
+            background: #F1F0CC;
+            padding: 1.2rem 0rem 1rem 1rem;
+            border: none;
+            border-radius: 3px;
+            color: black;
+            outline: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            box-shadow: 1px 4px 15px #3F0D12;
+            font-family: 'Oswald', sans-serif;
+            cursor: pointer;
+        }
+
+        .custom-select {
+            position: relative;
+            height: 58px;
+        }
+
+        @media (max-width:512px) {
+            .custom-select {
+                height: 54px;
+            }
+
+            select {
+                padding: 1rem 0rem 0.8rem 0.2rem;
+                font-size: 1.3rem;
+            }
+        }
+
+        .option {
+            padding: 1rem 2rem;
+        }
+
+        .icons {
+            display: block;
+            width: 3rem;
+            height: 100%;
+            background: #D5BF86;
+            position: absolute;
+            border-radius: 0 3px 3px 0;
+            top: 0;
+            right: 0;
+            pointer-events: none;
+        }
+
+        .icons::before,
+        .icons::after {
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            right: 20%;
+            transform: translate(-50%, 50%)
+        }
+
+        .icons::before {
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-bottom: 7px solid #A71D31;
+            top: 30%;
+        }
+
+        .icons::after {
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-top: 7px solid #A71D31;
+            top: 50%;
+        }
+
+        .selectcountry {
+            margin: 20px 20px;
+        }
+
+        /* .bigtext {
+      font-size: 1rem;
+    } */
+
+        .container {
+            display: flex;
+            justify-content: center;
+            background-color: white;
+            width: 100vw;
+            height: 42vw;
+            overflow: hidden;
+            border-bottom: 1px solid green;
+        }
+
+        .img1 {
+            display: none;
+        }
+
+        /* @media (max-width:540px) {
+            .img2{
+                display: none;
+            }
+            .img1{
+                display: block;
+            }
+        } */
+
+        @media (max-width:637px) {
+            .container {
+                width: 100vw;
+                height: 79vw;
+            }
+        }
+
+        .card__image--river {
+            background-image: url('/static/img/india1.png');
+        }
+
+        .card__image--record {
+            background-image: url('/static/img/pol2.jpeg');
+        }
+
+        .card__image--fence {
+            background-image: url('/static/img/pol3.jpeg');
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <li id="imglogo"><img src="static/img/logo3.png" alt="hey there" id="imglogo"></li>
+        <input type="checkbox" id="click">
+        <label for="click" class="menubtn">
+            <img src="static/img/images.png" alt="" style="width: 52px; margin-top: 14px;">
+        </label>
+        <nav>
+            <ul>
+                <li class="flexitem"><a href="home"> Home</a></li>
+                <li class="flexitem"><a href="about"> About</a></li>
+                <li class="flexitem"><a href="contact">Contact Us</a></li>
+                <li class="flexitem" id="fitem4">Login or Signup</li>
+            </ul>
+        </nav>
+    </header>
+    <!-- partial:index.partial.html -->
+    <div class="container">
+        <img src="/static/img/india24.png" alt="" class="img2">
+        <img src="/static/img/india1.png" alt="" class="img1">
+    </div>
+
+    <section id="frstartcl">
+
+        <span class="selectcountry">SELECT STATE</span>
+        <div class="custom-select">
+            <select name="forma" onchange="location = this.value;">
+                <option value="" class="option">-Select State-</option>
+                <option value="index.php" class="option">Andhra Pradesh</option>
+                <option value="index.html" class="option">Arunachal Pradesh</option>
+                <option value="about.html" class="option">Assam</option>
+                <option value="" class="option">Bihar</option>
+                <option value="" class="option">Chhattisgarh</option>
+                <option value="" class="option">Goa</option>
+                <option value="" class="option">Gujarat</option>
+                <option value="" class="option">Haryana</option>
+                <option value="" class="option">Himachal Pradesh</option>
+                <option value="" class="option">Jharkhand</option>
+                <option value="" class="option">Karnataka</option>
+                <option value="" class="option">Kerala</option>
+                <option value="" class="option">Madhya Pradesh</option>
+                <option value="" class="option">Maharashtra</option>
+                <option value="" class="option">Manipur</option>
+                <option value="" class="option">Meghalaya</option>
+                <option value="" class="option">Mizoram</option>
+                <option value="" class="option">Nagaland</option>
+                <option value="" class="option">Odisa</option>
+                <option value="" class="option">Punjab</option>
+                <option value="" class="option">Rajasthan</option>
+                <option value="" class="option">Sikkim</option>
+                <option value="" class="option">Tamli Nadu</option>
+                <option value="" class="option">Telangana</option>
+                <option value="" class="option">Tripura</option>
+                <option value="" class="option">Uttar Pradesh</option>
+                <option value="" class="option">Uttarakhand</option>
+                <option value="" class="option">West Bengal</option>
+            </select>
+            <span class="icons"></span>
+        </div>
+    </section>
+
+
+
+
+    <ul class="cards">
+        <li class="cards__item">
+            <div class="card">
+                <div class="card__image card__image--fence"></div>
+                <div class="card__content">
+                    <div class="card__title">Popular Parties</div>
+                    <p class="card__text">Some important popular political parties of India are listed below (with full forms as needed): <br>
+                        1.<strong>BJP</strong> (Bhartiya Janta Party) <br>
+                        1.<strong>National Congress</strong><br>
+                        1.<strong>JDU</strong>(Janta Dal United) <br>
+                        1.<strong>TMC</strong>(All India TrinaMool Congress)<br>
+                    </p>
+                    <button class="btn btn--block card__btn">Learn More..</button>
+                </div>
+            </div>
+        </li>
+        <li class="cards__item">
+            <div class="card">
+                <div class="card__image card__image--river"></div>
+                <div class="card__content">
+                    <div class="card__title" style="color: black;"><strong>India Analytics</strong></div>
+                    <p class="card__text">See how it is going on in India at this COVID hard times and how the
+                        government is controlling all the situations, What about Narendra Modi what he is going to do
+                        next?</p>
+                    <button class="btn btn--block card__btn">Know More</button>
+                </div>
+            </div>
+        </li>
+        <li class="cards__item">
+            <div class="card">
+                <div class="card__image card__image--record"></div>
+                <div class="card__content">
+                    <div class="card__title">Trending in India</div>
+                    <p class="card__text">Here are top 10 fresh trendings of India lets read all these to know what is
+                        happening. Trending events are very useful for knowing the current conditions very quickly so
+                        don't miss these</p>
+                    <button class="btn btn--block card__btn">Read More</button>
+                </div>
+            </div>
+        </li>
+
+    </ul>
+
+    <footer>
+        <div id="footerop">All Copyrights Reserved @Sujal</div>
+    </footer>
+
+    <!-- partial -->
+    <script src="static/js/script.js"></script>
+
+</body>
+
+</html>
